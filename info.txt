@@ -1,0 +1,432 @@
+섹션 1: Introduction
+------------------------------
+1. Problem With Thread / Request
+------------------------------
+2. IO Models
+------------------------------
+3. Request!
+------------------------------
+4. Reactive Streams Introduction
+------------------------------
+5. Reactive Programming Introduction
+------------------------------
+6. Assumptions &amp; Prerequisites
+------------------------------
+7. Publisher &amp; Subscriber Communication - Step By Step - MUST WATCH
+
++ Publisher
+  - Source
+  - Observable
+  - Upstream
+  - Producer
+
++ Subscriber
+  - Sink
+  - Observer
+  - Downstream
+  - Consumer
+  
+------------------------------
+퀴즈 1: Quiz
+------------------------------
+섹션 2: Resources
+------------------------------
+8. Source Code
+------------------------------
+섹션 3: Mono
+------------------------------
+9. Mono - Introduction
+
++ Mono
+	- It emits 0 or 1 item
+	- Followed by an onComplete / onError
+
++ Flux
+	- It emits 0 or N item
+	- Followed by an onComplete / onError 	
+
+------------------------------
+10. Why we need Mono?
+
+				Present Address		Previous Addresses
+Java			Address/null		List<address>
+Java Stream		Optional<Address>	Stream<Address>
+Reactor			Mono<Address>		Flux<Address>
+		
+------------------------------
+11. Maven Dependencies
+------------------------------
+12. Project Setup
+------------------------------
+13. Stream Lazy Behavior
+------------------------------
+14. [Mono] - Just
+------------------------------
+15. [Mono] - Subscribe - Part 1
+------------------------------
+16. [Mono] - Subscribe - onError
+------------------------------
+17. Simple Refactor
+------------------------------
+18. Use Of Faker
+------------------------------
+19. [Mono] - Emitting Empty / Error
+------------------------------
+20. [Mono] - From Supplier
+------------------------------
+21. [Mono] - From Callable
+------------------------------
+22. [Mono] - Pipeline Build vs Execution
+------------------------------
+23. [Mono] - Where is Async?
+------------------------------
+24. [Mono] - Block
+------------------------------
+25. [Mono] - From Future
+------------------------------
+26. [Mono] - From Runnable
+------------------------------
+27. [Mono] - Summary
+------------------------------
+28. [ASSIGNMENT] - File Service
+------------------------------
+29. [ASSIGNMENT-SOLUTION] - File Service Implementation - Part 1
+------------------------------
+30. [ASSIGNMENT-SOLUTION] - File Service Implementation - Part 2
+------------------------------
+퀴즈 2: Quiz
+------------------------------
+섹션 4: Flux
+------------------------------
+31. [Flux] - Introduction
+------------------------------
+32. [Flux] - Just
+------------------------------
+33. [Flux] - Multiple Subscribers
+------------------------------
+34. [Flux] - From Array / List
+------------------------------
+35. [Flux] - From Stream
+------------------------------
+36. [Flux] - Range
+------------------------------
+37. [Flux] - Log
+------------------------------
+38. [Flux] - Custom Subscriber Implementation
+------------------------------
+39. Flux vs List
+------------------------------
+40. [Flux] - Interval
+------------------------------
+41. [Flux] - From Mono / Publisher
+------------------------------
+42. [Flux] - To Mono
+------------------------------
+43. [Flux] - Summary
+------------------------------
+44. [ASSIGNMENT] - Stock Price Observer
+------------------------------
+45. [ASSIGNMENT-SOLUTION] - Stock Price Observer Implementation
+------------------------------
+퀴즈 3: Quiz
+------------------------------
+섹션 5: Flux - Emitting Items Programmatically
+------------------------------
+46. Introduction
+------------------------------
+47. Default Subscriber Implementation
+------------------------------
+48. Flux Create - Demo
+------------------------------
+49. Flux Create - Refactor
+------------------------------
+50. FluxSink - Sharing With Multiple Threads
+------------------------------
+51. FluxSink vs Sinks
+------------------------------
+52. Take Operator
+------------------------------
+53. Flux Create - Check If Down Stream Is Cancelled
+------------------------------
+54. Flux Generate
+------------------------------
+55. Flux Generate - Emit Until
+------------------------------
+56. Flux Generate - How To Have Counter
+------------------------------
+57. Flux Generate - With State
+------------------------------
+58. Flux Push
+------------------------------
+59. Summary
+------------------------------
+60. [ASSIGNMENT] - File Reader Service
+------------------------------
+61. [ASSIGNMENT-SOLUTION] - File Reader Service Implementation
+------------------------------
+퀴즈 4: Quiz
+------------------------------
+섹션 6: Operators
+------------------------------
+62. Introduction
+------------------------------
+63. Operator - Handle
+------------------------------
+64. Operator - Handle - Until Condition
+------------------------------
+65. Operator - Do Hooks / Callbacks - Part 1
+------------------------------
+66. Operator - Do Hooks / Callbacks - Part 2
+------------------------------
+67. Operator - Do Hooks / Callbacks - Part 3
+------------------------------
+68. Operator - Limit Rate
+------------------------------
+69. Operator - Delay
+------------------------------
+70. Operator - onError
+------------------------------
+71. Operator - Timeout
+------------------------------
+72. Operator - Default If Empty
+------------------------------
+73. Operator - Switch If Empty
+------------------------------
+74. Operator - Transform
+------------------------------
+75. Operator - Switch On First
+------------------------------
+76. Operator - Flat Map
+------------------------------
+77. Operator - Concat Map
+------------------------------
+78. Summary
+------------------------------
+퀴즈 5: Quiz
+------------------------------
+섹션 7: Hot &amp; Cold Publishers
+------------------------------
+79. Introduction
+------------------------------
+80. Cold Publisher
+------------------------------
+81. Hot Publisher - Share
+------------------------------
+82. Hot Publisher - Ref Count
+------------------------------
+83. Hot Publisher - Ref Count - Resubscribe
+------------------------------
+84. Hot Publisher - Auto Connect
+------------------------------
+85. Hot Publisher - Cache
+------------------------------
+86. Summary
+------------------------------
+87. [ASSIGNMENT] - Inventory/Revenue Stream
+------------------------------
+88. [ASSIGNMENT-SOLUTION] - Inventory/Revenue Stream Implementation
+------------------------------
+퀴즈 6: Quiz
+------------------------------
+섹션 8: Threading &amp; Schedulers
+------------------------------
+89. Introduction
+------------------------------
+90. Publisher/Subscriber - Default Thread - Demo
+------------------------------
+91. Subscribe On
+------------------------------
+92. Subscribe On - Demo
+------------------------------
+93. Multiple Subscribe On
+------------------------------
+94. More On Schedulers
+------------------------------
+95. Publish On
+------------------------------
+96. Publish On - Demo
+------------------------------
+97. Publish On &amp; Subscribe On
+------------------------------
+98. Parallel Execution
+------------------------------
+99. Note On Flux Interval
+------------------------------
+100. Summary
+------------------------------
+퀴즈 7: Quiz
+------------------------------
+섹션 9: Backpressure / Overflow Strategy
+------------------------------
+101. Introduction
+------------------------------
+102. Overflow Strategy - Buffer
+------------------------------
+103. Various Overflow Strategies
+------------------------------
+104. Overflow Strategy - Drop - Part 1
+------------------------------
+105. Overflow Strategy - Drop - Part 2
+------------------------------
+106. Overflow Strategy - Drop - Capturing Dropped Values
+------------------------------
+107. Overflow Strategy - Latest
+------------------------------
+108. Overflow Strategy - Drop Vs Latest
+------------------------------
+109. Overflow Strategy - Error
+------------------------------
+110. Overflow Strategy - Buffer With Size
+------------------------------
+111. Overflow Strategy - Flux Create
+------------------------------
+112. Summary
+------------------------------
+섹션 10: Combining Publishers
+------------------------------
+113. Introduction
+------------------------------
+114. Start With
+------------------------------
+115. Concat
+------------------------------
+116. Merge
+------------------------------
+117. Zip
+------------------------------
+118. Combine Latest
+------------------------------
+119. Summary
+------------------------------
+120. [ASSIGNMENT] - Car Price Over Time Stream
+------------------------------
+121. [ASSIGNMENT-SOLUTION] - Car Price Over Time Stream - Implementation
+------------------------------
+퀴즈 8: Quiz
+------------------------------
+섹션 11: Batching
+------------------------------
+122. Introduction
+------------------------------
+123. Batching With Buffer
+------------------------------
+124. Batching With Buffer - When Complete Signal Is Emitted
+------------------------------
+125. Batching With Buffer - Timeout
+------------------------------
+126. Batching With Buffer - Overlapping &amp; Dropping
+------------------------------
+127. [ASSIGNMENT] - Book Revenue By Category Stream
+------------------------------
+128. [ASSIGNMENT-SOLUTION] - Book Revenue By Category Stream - Implementation
+------------------------------
+129. Batching With Window
+------------------------------
+130. Batching With Window - Demo
+------------------------------
+131. Batching With Window - Duration
+------------------------------
+132. Batching With Group By
+------------------------------
+133. Batching With Group By - Demo
+------------------------------
+134. [ASSIGNMENT] - Kids &amp; Automotive Order Processing
+------------------------------
+135. [ASSIGNMENT-SOLUTION] - Kids &amp; Automotive Order Processing - Implementation
+------------------------------
+136. Additional Note On Assignment
+------------------------------
+137. Summary
+------------------------------
+섹션 12: Repeat &amp; Retry
+------------------------------
+138. Introduction
+------------------------------
+139. Repeat - Demo
+------------------------------
+140. Repeat With Condition
+------------------------------
+141. Retry
+------------------------------
+142. Retry With Fixed Delay
+------------------------------
+143. Retry Spec
+------------------------------
+섹션 13: Sinks
+------------------------------
+144. Introduction
+------------------------------
+145. Sink One - Try Emit Value
+------------------------------
+146. Sink One - Emit Failure Handler
+------------------------------
+147. Sink One - Multiple Subscribers
+------------------------------
+148. Sinks Types
+------------------------------
+149. Sink Many - Unicast
+------------------------------
+150. Sink Many - Unicast - Multiple Subscribers
+------------------------------
+151. Are Sinks Thread Safe?
+------------------------------
+152. Sink Many - Multicast
+------------------------------
+153. Sink Many - Multicast - Buffer
+------------------------------
+154. Sink Many - Multicast - Disable History
+------------------------------
+155. Sink Many - Multicast - Direct Best Effort
+------------------------------
+156. Sink Many - Replay
+------------------------------
+157. Summary
+------------------------------
+158. [ASSIGNMENT] - Slack Room Communication
+------------------------------
+159. [ASSIGNMENT-SOLUTION] - Slack Message - Implementation
+------------------------------
+160. [ASSIGNMENT-SOLUTION] - Slack Member - Implementation
+------------------------------
+161. [ASSIGNMENT-SOLUTION] - Slack Room - Implementation
+------------------------------
+162. [ASSIGNMENT-SOLUTION] - Slack Room - Final Demo
+------------------------------
+섹션 14: Context
+------------------------------
+163. Introduction
+------------------------------
+164. Context - Demo - Part 1
+------------------------------
+165. Context - Demo - Part 2
+------------------------------
+166. Context - Update
+------------------------------
+167. Context - Rate Limiter Implementation
+------------------------------
+섹션 15: Unit Testing With Step Verifier
+------------------------------
+168. Introduction
+------------------------------
+169. Step Verifier - Expect Next
+------------------------------
+170. Step Verifier - Error
+------------------------------
+171. Step Verifier - Expect Next Count &amp; Consume While
+------------------------------
+172. Step Verifier - Delay Test
+------------------------------
+173. Step Verifier - Virtual Time Test - Part 1
+------------------------------
+174. Step Verifier - Virtual Time Test - Part 2
+------------------------------
+175. Step Verifier - Scenario Name
+------------------------------
+176. Step Verifier - Context
+------------------------------
+177. Summary
+------------------------------
+섹션 16: Thank You
+------------------------------
+178. What next?
+------------------------------
