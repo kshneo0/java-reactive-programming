@@ -10,9 +10,12 @@ public class Lec06SupplierRefactoring {
 	public static void main(String[] args) {
 		
 		getName();
-		getName()
-		.subscribeOn(Schedulers.boundedElastic())
-		.subscribe(Util.onNext());
+		String name = getName()
+				.subscribeOn(Schedulers.boundedElastic())
+				.block();
+//		.subscribe(Util.onNext());
+		
+		System.out.println(name);
 		getName();
 		
 		
