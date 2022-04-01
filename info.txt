@@ -63,6 +63,11 @@ Reactor			Mono<Address>		Flux<Address>
 14. [Mono] - Just
 ------------------------------
 15. [Mono] - Subscribe - Part 1
+
+- onNext - Consumer<T>
+- onError - Consumer<Throwable>
+- onComplete - Runnable
+
 ------------------------------
 16. [Mono] - Subscribe - onError
 ------------------------------
