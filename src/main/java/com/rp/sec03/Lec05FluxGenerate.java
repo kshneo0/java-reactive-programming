@@ -13,7 +13,7 @@ public class Lec05FluxGenerate {
 			synchronousSink.next(Util.faker().country().name());	// 1
 //			synchronousSink.next(Util.faker().country().name());	// Error
 //			synchronousSink.complete();
-			synchronousSink.error(new RuntimeException("oops"));
+//			synchronousSink.error(new RuntimeException("oops"));
 		})
 		.take(2)
 		.subscribe(Util.subscriber());
