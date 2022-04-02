@@ -19,7 +19,7 @@ public class Lec09FluxFromMono {
 		
 		Flux.range(1,10)
 			.filter(i-> i > 3)
-			.next()
+			.next()	// 1
 			.subscribe(Util.onNext(),
 					Util.onError(),
 					Util.onComplete());
