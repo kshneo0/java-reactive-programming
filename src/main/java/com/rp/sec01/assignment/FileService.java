@@ -5,9 +5,23 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import reactor.core.publisher.Mono;
+
 public class FileService {
 	private static final Path PATH = Paths.get("src/main/resources/assignment/sec01");
+	
+	public static Mono<String> read(String fileName){
+		return Mono.fromSupplier( () -> readFile(fileName));
+	}
 			
+	public static Mono<Void> write(String fileName, String content){
+		return Mono.fromRunnable( () -> writeFile(fileName, content));
+	}
+	
+	public static Mono<Void> delete(String fileName){
+		return Mono.fromRunnable( () -> deleteFile(fileName));
+	}	
+	
 	private static String readFile(String fileName) {
 		try {
 			return Files.readString(PATH.resolve(fileName));
