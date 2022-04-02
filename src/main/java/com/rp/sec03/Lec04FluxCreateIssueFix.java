@@ -11,19 +11,22 @@ public class Lec04FluxCreateIssueFix {
 		// only one instance of fluxsink
 		Flux.create(fluxSink -> {
 
-						String country;
-						
-						do {
-							country = Util.faker().country().name();
-							System.out.println("emitting : " + country);
-							fluxSink.next(country);
-						} while(!country.toLowerCase().equals("canada") && !fluxSink.isCancelled());
-						
-						fluxSink.complete();
-						
-					})
-					.take(3)
-					.subscribe(Util.subscriber());
+			String country;
+			int count = 0;
+			do {
+				country = Util.faker().country().name();
+				System.out.println("emitting : " + country + " cnt : "+ count);
+				fluxSink.next(country);
+				count ++;
+			} while(!country.toLowerCase().equals("canada") && 
+					!fluxSink.isCancelled() &&
+					count < 10);
+					
+			fluxSink.complete();
+					
+		})
+//		.take(3)
+		.subscribe(Util.subscriber());
 
 	}
 
