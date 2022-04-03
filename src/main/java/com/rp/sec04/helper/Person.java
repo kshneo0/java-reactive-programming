@@ -15,24 +15,4 @@ public class Person {
         this.name = Util.faker().name().firstName();
         this.age = Util.faker().random().nextInt(1, 30);
     }
-    
-    
-    public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}	
-
-    public int getAge() {
-		return age;
-	}
-
-
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", age=" + age + "]";
-	}  
-        
 }
