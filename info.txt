@@ -251,7 +251,7 @@ Reactor			Mono<Address>		Flux<Address>
 ------------------------------
 96. Publish On - Demo
 ------------------------------
-97. Publish On &amp; Subscribe On
+97. Publish On & Subscribe On
 ------------------------------
 98. Parallel Execution
 ------------------------------
