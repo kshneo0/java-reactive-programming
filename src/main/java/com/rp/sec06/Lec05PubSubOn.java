@@ -5,7 +5,7 @@ import com.rp.courseutil.Util;
 import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
 
-public class Lec04PublishOn {
+public class Lec05PubSubOn {
 
 	public static void main(String[] args) {
 		
@@ -19,9 +19,9 @@ public class Lec04PublishOn {
 		.doOnNext(i -> printThreadName("next " + i));
 		
 		flux
-			.publishOn(Schedulers.boundedElastic())
-			.doOnNext(i -> printThreadName("next " + i))
 			.publishOn(Schedulers.parallel())
+			.doOnNext(i -> printThreadName("next " + i))
+			.subscribeOn(Schedulers.boundedElastic())
 			.subscribe(v -> printThreadName("sub "+ v));
 		
 		Util.sleepSeconds(5);
