@@ -10,8 +10,8 @@ public class Lec04LimitRate {
 		
 		Flux.range(1,1000)
 			.log()
-//			.limitRate(100, 99)
-			.limitRate(100, 0)
+//			.limitRate(100, 99)	//Default 75, 여기서는 99개씩 가져오도록 요청
+			.limitRate(100, 0)	//100개 가져오고 난 다음에 요청 
 			.subscribe(Util.subscriber());
 
 	}
