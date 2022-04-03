@@ -27,10 +27,11 @@ public class Lec03DoCallbacks {
 		.doOnTerminate(() -> System.out.println("doOnTerminate"))
 		.doOnCancel(() -> System.out.println("doOnCancel"))
 		.doOnSubscribe(s -> System.out.println("doOnSubscribe 2 " + s))
-		.doFinally(signal -> System.out.println("doFinally : " + signal))
+		.doFinally(signal -> System.out.println("doFinally 1 : " + signal))
 		.doFirst(() -> System.out.println("doFirst 3"))
 		.doOnDiscard(Object.class, o -> System.out.println("doOnDiscard : " + o))
 		.take(2)
+		.doFinally(signal -> System.out.println("doFinally 2 : " + signal))
 		.subscribe(Util.subscriber());
 
 	}
