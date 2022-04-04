@@ -1,5 +1,8 @@
 package com.rp.sec07;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.rp.courseutil.Util;
 
 import reactor.core.publisher.Flux;
@@ -11,9 +14,11 @@ public class Lec02Drop {
 		
 		// 75% 12
         System.setProperty("reactor.bufferSize.small", "16");
+        
+        List<Object> list = new ArrayList<>();
 		
 		Flux.create(fluxSink -> {
-			for (int i = 0; i < 501; i++ ) {
+			for (int i = 0; i < 201; i++ ) {
 				fluxSink.next(i);
 				System.out.println("Pushed : " + i);
 				Util.sleepMillis(1);
@@ -21,14 +26,15 @@ public class Lec02Drop {
 			fluxSink.complete();
 		})
 //			.onBackpressureBuffer()
-			.onBackpressureDrop()
+			.onBackpressureDrop(list::add)
 			.publishOn(Schedulers.boundedElastic())
 			.doOnNext( i-> {
 				Util.sleepMillis(10);
 			})
 			.subscribe(Util.subscriber());
 		
-		Util.sleepSeconds(60);
+		Util.sleepSeconds(10);
+		System.out.println(list);
 
 	}
 
