@@ -16,10 +16,13 @@ public class Lec01SinkOne {
         Mono<Object> mono = sink.asMono();
         
         mono.subscribe(Util.subscriber("sam"));
+        mono.subscribe(Util.subscriber("mike"));
         
 //        sink.tryEmitValue("hi");
 //        sink.tryEmitEmpty();
 //        sink.tryEmitError(new RuntimeException("err"));
+        
+/*        
         sink.emitValue("hi", (signglType, emitResult) -> {
         	System.out.println(signglType.name());
         	System.out.println(emitResult.name());
@@ -31,8 +34,8 @@ public class Lec01SinkOne {
             System.out.println(emitResult.name());
             return false;	//true일 경우 반복해서 시도 
         });
-        
-
+*/        
+        sink.tryEmitValue("hello");
     }
 
 }
