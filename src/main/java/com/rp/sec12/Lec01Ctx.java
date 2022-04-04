@@ -9,8 +9,10 @@ public class Lec01Ctx {
     public static void main(String[] args) {
 
         getWelcomeMessage()
-        .contextWrite(Context.of("user", "sam"))
-                .subscribe(Util.subscriber());
+//        	.contextWrite(Context.of("users", "jake"))
+        	.contextWrite(Context.of("user", "jake"))
+        	.contextWrite(Context.of("user", "sam"))
+            .subscribe(Util.subscriber());
 
     }
 
