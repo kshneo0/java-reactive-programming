@@ -8,6 +8,7 @@ public class Lec04Zip {
 
 	public static void main(String[] args) {
 		Flux.zip(getBody(), getTires(), getEngine())
+//			.doOnNext(tuple3 -> tuple3.)
 			.subscribe(Util.subscriber());
 
 	}
