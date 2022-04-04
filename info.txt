@@ -417,7 +417,7 @@ Reactor			Mono<Address>		Flux<Address>
 ------------------------------
 170. Step Verifier - Error
 ------------------------------
-171. Step Verifier - Expect Next Count &amp; Consume While
+171. Step Verifier - Expect Next Count & Consume While
 ------------------------------
 172. Step Verifier - Delay Test
 ------------------------------
