@@ -319,7 +319,7 @@ Reactor			Mono<Address>		Flux<Address>
 ------------------------------
 125. Batching With Buffer - Timeout
 ------------------------------
-126. Batching With Buffer - Overlapping &amp; Dropping
+126. Batching With Buffer - Overlapping & Dropping
 ------------------------------
 127. [ASSIGNMENT] - Book Revenue By Category Stream
 ------------------------------
