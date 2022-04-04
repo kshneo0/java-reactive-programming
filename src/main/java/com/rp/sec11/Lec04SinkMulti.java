@@ -10,7 +10,8 @@ public class Lec04SinkMulti {
     public static void main(String[] args) {
 
         // handle through which we would push items
-        Many<Object> sink = Sinks.many().multicast().onBackpressureBuffer();
+//        Many<Object> sink = Sinks.many().multicast().onBackpressureBuffer();
+    	Many<Object> sink = Sinks.many().multicast().directAllOrNothing();
 
         // handle through which subscribers will receive items
         Flux<Object> flux = sink.asFlux();
