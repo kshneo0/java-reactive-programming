@@ -24,8 +24,11 @@ public class Util {
 		return FAKER;
 	}
 	public static void sleepSeconds(int seconds) {
+		sleepMillis(seconds * 1000);
+	}
+	public static void sleepMillis(int mills) {
 		try {
-			Thread.sleep(seconds*1000);
+			Thread.sleep(mills);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
