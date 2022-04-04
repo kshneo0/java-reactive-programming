@@ -16,6 +16,7 @@ public class Lec02SinkUnicast {
         Flux<Object> flux = sink.asFlux();
 
         flux.subscribe(Util.subscriber("sam"));
+//        flux.subscribe(Util.subscriber("mike"));
 
         sink.tryEmitNext("hi");
         sink.tryEmitNext("how are you");
