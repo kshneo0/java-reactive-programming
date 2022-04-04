@@ -337,7 +337,7 @@ Reactor			Mono<Address>		Flux<Address>
 ------------------------------
 134. [ASSIGNMENT] - Kids &amp; Automotive Order Processing
 ------------------------------
-135. [ASSIGNMENT-SOLUTION] - Kids &amp; Automotive Order Processing - Implementation
+135. [ASSIGNMENT-SOLUTION] - Kids & Automotive Order Processing - Implementation
 ------------------------------
 136. Additional Note On Assignment
 ------------------------------
