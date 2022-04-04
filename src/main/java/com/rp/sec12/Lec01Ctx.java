@@ -9,8 +9,7 @@ public class Lec01Ctx {
     public static void main(String[] args) {
 
         getWelcomeMessage()
-//        	.contextWrite(Context.of("users", "jake"))
-        	.contextWrite(Context.of("user", "jake"))
+        	.contextWrite(ctx -> ctx.put("user", ctx.get("user").toString().toUpperCase()))
         	.contextWrite(Context.of("user", "sam"))
             .subscribe(Util.subscriber());
 
