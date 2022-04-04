@@ -13,8 +13,9 @@ public class Lec01Repeat {
     public static void main(String[] args) {
 
         getIntegers()
-        		.repeat(2)
-//                .repeat(() -> atomicInteger.get() < 14)
+//        		.repeat()
+//        		.repeat(2)
+                .repeat(() -> atomicInteger.get() < 14)
                 .subscribe(Util.subscriber());
         
     }
@@ -24,6 +25,7 @@ public class Lec01Repeat {
         return Flux.range(1, 3)
                     .doOnSubscribe(s -> System.out.println("Subscribed"))
                     .doOnComplete(() -> System.out.println("--Completed"))
+//                    .map(i -> i/0);
                     .map(i -> atomicInteger.getAndIncrement());
     }
 
